@@ -54,21 +54,14 @@ document.getElementById("mooveLink").setAttribute("href", moove);
 document.getElementById("mooveLink").innerText = "Moove";
 
 document.getElementById("nppicLink").setAttribute("href", nppic);
-document.getElementById("nppicLink").innerText = "NonPrendermiPerIlChilometro";
+document.getElementById("nppicLink").innerText = "NPPIC";
 
 
 // SOCIAL URLS
 document.getElementById("googleLink").setAttribute("href", google);
-document.getElementById("googleLink").innerText = "Google";
-
 document.getElementById("instagramLink").setAttribute("href", instagram);
-document.getElementById("instagramLink").innerText = "Instagram";
-
 document.getElementById("facebookLink").setAttribute("href", facebook);
-document.getElementById("facebookLink").innerText = "Facebook";
-
 document.getElementById("tiktokLink").setAttribute("href", tiktok);
-document.getElementById("tiktokLink").innerText = "TikTok";
 
 
 // LEGAL URLS
