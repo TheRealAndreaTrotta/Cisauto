@@ -121,6 +121,9 @@
             padding-top: 10px;
         }
         
+        .policy-container-number{
+            color: var(--main-color);
+        }
 
         /*CURTAIN EFFECT*/
         .toggle-content {
