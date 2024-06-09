@@ -93,21 +93,6 @@
             align-items: center;
         }
 
-        .policy-container{
-            text-align: left;
-            width: 80rem;
-            margin: auto;
-        }
-
-        .policy-container h1{
-            font-size: 27px;
-            cursor: pointer;
-        }
-
-        .policy-container p{
-            padding-top: 10px;
-        }
-        
         .logo{
             font-size: 6rem;
             color: var(--second-text-color);
@@ -120,11 +105,28 @@
         }
 
 
+        .policy-container{
+            text-align: left;
+            width: 80rem;
+            margin: auto;
+        }
+
+        .policy-container h1{
+            padding-bottom: 10px;
+            font-size: 27px;
+            cursor: pointer;
+        }
+
+        .policy-container p{
+            padding-top: 10px;
+        }
+        
+
         /*CURTAIN EFFECT*/
         .toggle-content {
             overflow: hidden;
             max-height: 0;
-            transition: max-height 0.5s ease; 
+            transition: max-height 0.3s ease; 
         }
         
         .toggle-content.active {
@@ -132,9 +134,9 @@
         }        
 
         .toogle-bottom{
-            margin-top: 20px;
             border-top: 1px solid #555;
             padding-top: 20px;
+            padding-bottom: 20px;
             width: 100%;
             text-align: center;
         }
