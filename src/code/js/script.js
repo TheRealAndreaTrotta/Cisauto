@@ -33,10 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
 function toggleRotation() {
     const icon = document.querySelector('.bx');
     icon.classList.toggle('rotated');
 }
-
 

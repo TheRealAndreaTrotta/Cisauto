@@ -79,7 +79,7 @@ button:hover {
 }
 
 .rotate {
-    transition: transform 0.5s ease; 
+    transition: transform 0.3s ease; 
 }
 
 .rotated {
@@ -117,6 +117,11 @@ button:hover {
     cursor: pointer;
 }
 
+.policy-container h2{
+    font-weight: lighter;
+    padding-bottom: 30px;
+}
+
 .policy-container p{
     padding-top: 10px;
 }
@@ -129,7 +134,7 @@ button:hover {
 .toggle-content {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.3s ease; 
+    transition: max-height 0.5s ease; 
 }
 
 .toggle-content.active {
