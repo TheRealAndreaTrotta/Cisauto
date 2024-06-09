@@ -32,10 +32,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const elementToRotate = document.querySelector(".rotate");
 
-    elementToRotate.addEventListener("click", function() {
-        this.classList.toggle("rotated");
-    });
-});
+
+function toggleRotation() {
+    const icon = document.querySelector('.bx');
+    icon.classList.toggle('rotated');
+}
+
+
