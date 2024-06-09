@@ -37,9 +37,13 @@
 
 :root{
     --main-color: #D4AF37;
+
     --bg-color: rgb(24, 24, 24);
     --second-bg-color: rgb(48, 48, 48);
+    --third-bg-color: #fff;
+
     --text-color: #fff;
+    --second-text-color: rgb(24, 24, 24);
 }
 
 html{
@@ -255,7 +259,6 @@ span{
 
 .footer ul li a {
     color: var(--text-color);
-    border-bottom: 3px solid transparent;
     transition: 0.3s ease-in-out;
 }
 
