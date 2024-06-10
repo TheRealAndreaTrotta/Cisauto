@@ -69,7 +69,6 @@ document.getElementById("legalLink").setAttribute("href", legal);
 document.getElementById("legalLink").innerText = "Legal";
 
 document.getElementById("privacyPolicyLink").setAttribute("href", privacyPolicy);
-document.getElementById("privacyPolicyLink").innerText = "Privacy Policy";
 
 document.getElementById("cookiePolicyLink").setAttribute("href", cookiePolicy);
 document.getElementById("cookiePolicyLink").innerText = "Cookie Policy";

@@ -20,43 +20,16 @@ function initMap() {
     });
 }
 
-//CURTAIN
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleTitles = document.querySelectorAll(".toggle-title");
-
-    toggleTitles.forEach(title => {
-        title.addEventListener("click", function() {
-            const content = this.nextElementSibling;
-            content.classList.toggle("active");
-        });
-    });
-});
-
-//ROTADE ICON
-function toggleRotation() {
-    const icon = document.querySelector('.bx');
-    icon.classList.toggle('rotated');
-}
-
 //CURTAIN EFFECT
-function toggleContent(element) {
-    const content = element.nextElementSibling;
-    const arrow = element.querySelector('.rotate');
+function toggleRotation(iconId) {
+    const icon = document.getElementById(iconId);
+    const content = icon.parentElement.parentElement.nextElementSibling;
 
     if (content.classList.contains('active')) {
-        // Start closing transition
+        icon.classList.remove('rotated');
         content.classList.remove('active');
-        arrow.classList.remove('open');
     } else {
-        // Start opening transition
-        content.style.transition = 'max-height 0.5s ease'; // Set fast transition
+        icon.classList.add('rotated');
         content.classList.add('active');
-        arrow.classList.add('open');
-
-        setTimeout(() => {
-            content.style.transition = 'max-height 5s ease'; // Revert to slow transition
-        }, 500); // Duration of fast opening transition
     }
 }
-
-
