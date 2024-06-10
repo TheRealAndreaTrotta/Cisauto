@@ -1,7 +1,7 @@
 // INFO URLS
 var address = "https://maps.app.goo.gl/jredbZaqToeCXEv89";
-var phone = "";
-var email = "Cisautosrl@gmail.com";
+var phone = "tel:+393495518640";
+var email = "mailto:Cisautosrl@gmail.com";
 
 // SALES PLATFORM URLS
 var autoscout24 = "https://www.autoscout24.it/concessionari/cisauto-group";
