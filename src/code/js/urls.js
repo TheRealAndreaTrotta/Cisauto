@@ -1,7 +1,7 @@
 // INFO URLS
 var address = "https://maps.app.goo.gl/jredbZaqToeCXEv89";
 var phone = "";
-var email = "mailto:info@example.com";
+var email = "Cisautosrl@gmail.com";
 
 // SALES PLATFORM URLS
 var autoscout24 = "https://www.autoscout24.it/concessionari/cisauto-group";
@@ -32,14 +32,8 @@ var rewardAnticounterfeiting = "";
 
 // INFO URLS
 document.getElementById("addressLink").setAttribute("href", address);
-document.getElementById("addressLink").innerText = "Address";
-
 document.getElementById("phoneLink").setAttribute("href", phone);
-document.getElementById("phoneLink").innerText = "Phone";
-
 document.getElementById("emailLink").setAttribute("href", email);
-document.getElementById("emailLink").innerText = "Email";
-
 
 // SALES PLATFORM URLS
 document.getElementById("autoscout24Link").setAttribute("href", autoscout24);
@@ -66,27 +60,11 @@ document.getElementById("tiktokLink").setAttribute("href", tiktok);
 
 // LEGAL URLS
 document.getElementById("legalLink").setAttribute("href", legal);
-document.getElementById("legalLink").innerText = "Legal";
-
 document.getElementById("privacyPolicyLink").setAttribute("href", privacyPolicy);
-
 document.getElementById("cookiePolicyLink").setAttribute("href", cookiePolicy);
-document.getElementById("cookiePolicyLink").innerText = "Cookie Policy";
-
 document.getElementById("sendPrivacyRequestLink").setAttribute("href", sendPrivacyRequest);
-document.getElementById("sendPrivacyRequestLink").innerText = "Send Privacy Request";
-
 document.getElementById("accessibilityLink").setAttribute("href", accessibility);
-document.getElementById("accessibilityLink").innerText = "Accessibility";
-
 document.getElementById("contactsLink").setAttribute("href", contacts);
-document.getElementById("contactsLink").innerText = "Contacts";
-
 document.getElementById("corporateItaLink").setAttribute("href", corporateIta);
-document.getElementById("corporateItaLink").innerText = "Corporate Italia";
-
 document.getElementById("responsibleDisclosureLink").setAttribute("href", responsibleDisclosure);
-document.getElementById("responsibleDisclosureLink").innerText = "Responsible Disclosure";
-
 document.getElementById("rewardAnticounterfeitingLink").setAttribute("href", rewardAnticounterfeiting);
-document.getElementById("rewardAnticounterfeitingLink").innerText = "Reward Anticounterfeiting";
