@@ -136,12 +136,12 @@ button:hover {
 .toggle-content {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 2s ease-out; /* Fast closing transition */
+    transition: max-height 1s ease-out; /* Fast closing transition */
 }
 
 .toggle-content.active {
     max-height: 1000px; 
-    transition: max-height 2s ease-in; /* Slow opening transition */
+    transition: max-height 1.3s ease-in; /* Slow opening transition */
 }
 
 .toggle-title {
@@ -149,16 +149,12 @@ button:hover {
 }
 
 .toggle-content h3{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bolder;
+    padding-bottom: 3px;
     color: var(--second-text-color);
 }
 
-.toggle-content p{
-    font-size: 15px;
-    font-weight: lighter;
-    color: var(--second-text-color);
-}
 .rotated {
     transform: rotate(-90deg);
     transition: transform 0.5s ease;
@@ -171,7 +167,6 @@ button:hover {
     width: 100%;
     text-align: center;
 }
-
 
 /* NEWSLETTER */
 .newsletter {
