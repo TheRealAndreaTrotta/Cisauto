@@ -85,6 +85,11 @@ button:hover {
     width: 100%;
     padding: 4rem 9%;
     align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.logo-header:hover{
+    transform: scale(1.1);
 }
 
 .logo{
@@ -97,22 +102,10 @@ button:hover {
 .logo span{
     color: var(--main-color);
 }
-.policy-background {
-    position: fixed; /* Fissa la sezione nella posizione specificata */
-    top: 50%; /* Posiziona la sezione in alto al 50% del viewport */
-    left: 50%; /* Posiziona la sezione a sinistra al 50% del viewport */
-    transform: translate(-50%, -50%); /* Centra la sezione rispetto al punto di riferimento in alto a sinistra */
-    background-color: #f2f2f2; /* Colore dello sfondo */
-    padding: 20px; /* Spazio interno per separare il contenuto dal bordo */
-    border-radius: 10px; /* Bordo arrotondato per un aspetto più moderno */
-    z-index: 1; /* Assicura che la sezione sia sovrapposta alla successiva */
-}
 
-.next-section {
-    margin-top: 150px; /* Aggiunge uno spazio sopra la sezione successiva per evitare che venga "sommersa" */
-    z-index: 0; /* Assicura che la sezione successiva sia dietro la sezione fissa */
+.policy-background{
+    /*code*/
 }
-
 
 .policy-container{
     text-align: left;
@@ -155,6 +148,17 @@ button:hover {
     cursor: pointer;
 }
 
+.toggle-content h3{
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--second-text-color);
+}
+
+.toggle-content p{
+    font-size: 15px;
+    font-weight: lighter;
+    color: var(--second-text-color);
+}
 .rotated {
     transform: rotate(-90deg);
     transition: transform 0.5s ease;
