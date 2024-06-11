@@ -168,168 +168,44 @@ button:hover {
     text-align: center;
 }
 
-/* NEWSLETTER */
-.newsletter {
-    background-color: var(--second-bg-color);
-    color: var(--text-color);
-    align-items: center;
+/* FORMS  */
+.pre-form{
     text-align: center;
-    padding: 8rem;
+    width: 80rem;
+    margin: auto;
+    padding-bottom: 5rem;
 }
 
-.newsletter h1 {
-    color: var(--main-color);
-    font-size: 20px;
-    margin-top: 10px;
-    padding: 10px;
-}
-
-.newsletter p {
-    color: var(--text-color);
-    font-size: 15px;
-    margin-top: 10px;
-    padding: 10px;
-}
-
-/*GOOGLE MAPS*/
-.maps iframe {
-    width: 100%; 
-    height: 450px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-}
-
-
-/* FOOTER 1 */
-.footer {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+.contact{
+    border: solid;
+    border-color: var(--main-color);
+    width: 60rem;
     padding: 20px;
+    border-radius: 5%;
+    margin: auto;
+}
+
+.contact form{
+    max-width: 50rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.footer .social {
-    color: var(--text-color);
-}
-
-.footer .social a {
-    color: var(--text-color);
-    font-size: 25px;
-    border: 2px solid var(--text-color);
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 10px;
-}
-
-.footer .social a:hover {
-    color: var(--text-color);
-}
-
-.footer ul {
-    margin-top: 0;
-    padding: 30px;
-    font-size: 12px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-.footer ul li {
-    display: inline-block;
-    padding: 0 12px;
-}
-
-.footer ul li p {
-    font-size: 15px;
-    padding: 3px;
-}
-
-.footer ul li a {
-    color: var(--text-color);
-    transition: 0.3s ease-in-out;
-}
-
-.footer ul li a:hover {
-    color: var(--main-color);
-}
-
-.footer .footer-bottom {
-    margin-top: 20px;
-    border-top: 1px solid #555;
-    padding-top: 20px;
+.contact form .input-box input, .contact form textarea{
     width: 100%;
-    text-align: center;
-}
-
-/* FOOTER 2 */
-.footer .copyright, p {
-    padding: 40px;
-    font-size: 12px;
-    color: rgb(85, 85, 85);
-}
-
-/* FOOTER 3 */
-.legal-footer {
-    background-color: var(--second-bg-color);
-    color: var(--text-color);
-    padding: 40px 0;
-    text-align: center;
-    font-size: 12px;
-}
-
-.legal-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.legal-footer ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.legal-footer ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.legal-footer ul li a:hover {
-    color: var(--main-color);
-}
-
-/* FOOTER 4 */
-.footer-logo {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    padding: 0.8rem 0.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-logo img {
-    width: 10rem;
-}
-
-/* SCROLLBAR 1 */
-::-webkit-scrollbar {
-    width: 1px;
-    height: 1px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--main-color);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--bg-color);
-    border-radius: 10px;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--second-text-color);
+    background: var(--third-bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--bg-color);
+    margin: 1rem 0;
+    resize: none;
 }

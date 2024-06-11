@@ -19,16 +19,14 @@ var tiktok = "https://www.tiktok.com/@cisautogroupbrescello?_t=8n0MJk749i4&_r=1"
 
 // LEGAL URLS
 var legal = "";
-var privacyPolicy = "src/code/pages/privacy-policy.html";
-var cookiePolicy = "src/code/pages/cookie-policy.html";
-var sendPrivacyRequest = "";
+var privacyPolicy = "privacy-policy.html";
+var cookiePolicy = "cookie-policy.html";
+var sendPrivacyRequest = "privacy-request.html";
 var accessibility = "";
-var contacts = "src/code/pages/contacts.html";
+var contacts = "";
 var corporateIta = "https://maps.app.goo.gl/jredbZaqToeCXEv89";
 var responsibleDisclosure = "";
 var rewardAnticounterfeiting = "";
-
-
 
 // INFO URLS
 document.getElementById("addressLink").setAttribute("href", address);
