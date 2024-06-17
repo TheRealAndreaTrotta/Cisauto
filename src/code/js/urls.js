@@ -12,7 +12,7 @@ var moove = "https://moovesrl.com";
 var nppic = "https://www.nonprendermiperilchilometro.it";
 
 // SOCIAL URLS
-var google = "";
+var google = "https://g.co/kgs/whVwhCi";
 var instagram = "https://www.instagram.com/cisautogroupbrescello?igsh=MW1wZjFrcXM3dXUwMA%3D%3D&utm_source=qr";
 var facebook = "https://www.facebook.com/CISAUTOBRESCELLOGROUP";
 var tiktok = "https://www.tiktok.com/@cisautogroupbrescello?_t=8n0MJk749i4&_r=1";
