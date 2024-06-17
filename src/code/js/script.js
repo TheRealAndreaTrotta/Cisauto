@@ -12,14 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//GOOGLE MAPS
-function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-    });
-}
-
 //CURTAIN EFFECT
 function toggleRotation(iconId) {
     const icon = document.getElementById(iconId);

@@ -159,10 +159,6 @@ button:hover {
     line-height: 1;
 }
 
-span{
-    color: var(--main-color);
-}
-
 .logo span{
     color: var(--main-color);
 }
@@ -217,27 +213,6 @@ span{
     text-align: center;
 }
 
-.footer .social {
-    color: var(--text-color);
-}
-
-.footer .social a {
-    color: var(--text-color);
-    font-size: 25px;
-    border: 2px solid var(--text-color);
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 10px;
-}
-
-.footer .social a:hover {
-    color: var(--text-color);
-}
-
 .footer ul {
     margin-top: 0;
     padding: 30px;
@@ -276,13 +251,75 @@ span{
 }
 
 /*FOOTER 2*/
+.social ul li a:hover {
+    color: var(--text-color);
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social li {
+    margin: 15px 0;
+}
+
+.social a {
+    color: var(--text-color);
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.icon-circle {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.icon-circle:hover {
+    background-color: var(--third-bg-color);
+    color: var(--second-text-color);
+}
+
+.social a h1 {
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.social a i:last-child {
+    margin-left:none; /* aggiunto un margine sinistro */
+}
+
+.social a:hover .icon-circle {
+    background-color: var(--third-bg-color);
+    color: var(--second-text-color);
+}
+
+/*FOOTER 3*/
 .footer .copyright, p{
     padding: 40px;
     font-size: 12px;
     color: rgb(85, 85, 85);
 }
 
-/*FOOTER 3*/
+/*FOOTER 4*/
 .legal-footer {
     background-color: var(--second-bg-color);
     color: var(--text-color);
@@ -311,7 +348,7 @@ span{
     color: var(--main-color);
 }
 
-/*FOOTER 4*/
+/*FOOTER 5*/
 .footer-logo {
     background-color: var(--bg-color);
     color: var(--text-color);
