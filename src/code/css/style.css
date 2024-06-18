@@ -37,6 +37,7 @@
 
 :root{
     --main-color: #D4AF37;
+    --hover-main-color: #f3bc08;
 
     --bg-color: rgb(24, 24, 24);
     --second-bg-color: rgb(48, 48, 48);
@@ -44,6 +45,8 @@
 
     --text-color: #fff;
     --second-text-color: rgb(24, 24, 24);
+
+    --accent-color: #ff9800;
 }
 
 html{
@@ -64,12 +67,14 @@ button {
     padding: 10px;
     width: 25rem;
     height: 5.5rem;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     border-radius: 0.8rem;
+    cursor: pointer;
 }
 
 button:hover {
-    transform: scale(1.1); 
+    background-color: var(--hover-main-color);
+    transform: scale(1.05); 
 }
 
 .header{
@@ -295,6 +300,7 @@ button:hover {
 .icon-circle:hover {
     background-color: var(--third-bg-color);
     color: var(--second-text-color);
+    transition: transform 0.3s ease-in-out
 }
 
 .social a h1 {
@@ -304,7 +310,7 @@ button:hover {
 }
 
 .social a i:last-child {
-    margin-left:none; /* aggiunto un margine sinistro */
+    margin-left:none; 
 }
 
 .social a:hover .icon-circle {
@@ -379,101 +385,73 @@ button:hover {
     border-radius: 10px;
 }
 
-
-
-
-.container {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.contact .heading{
+    padding-top: 10px;
+    font-size: 27px;
 }
 
-.contact-wrapper {
-    display: flex;
-}
-
-.side-container {
-    width: 30%;
-    padding: 10px;
-}
-
-#contactInfo {
-    display: none;
-}
-
-#contactInfo.hidden {
-    display: block;
-}
-
-.form-container {
-    width: 70%;
-    padding: 10px;
-}
-
-h1 {
+.contact {
+    padding: 3rem;
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
-.form-group {
-    margin-bottom: 20px;
+.contact h2 {
+    margin-bottom: 3rem;
+    color: var(--main-color);
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    background-color: var(--bg-color); 
+    /*border-radius: 0.8rem;*/
+    /*box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.form-group.button-group {
+.contact form .input-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-button[type="submit"] {
-    background-color: #4CAF50;
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form textarea {
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    background-color: var(--main-color);
     color: white;
-    padding: 12px 20px;
+    padding: 1.5rem 3rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.8rem;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
 }
 
-button[type="submit"]:hover {
-    background-color: #45a049;
+.contact form .btn:hover {
+    background-color: var(--hover-main-color);
+    transform: scale(1.05); 
 }
 
-button#toggleContacts {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-button#toggleContacts:hover {
-    background-color: #0056b3;
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color); 
 }
