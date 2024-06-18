@@ -294,7 +294,8 @@ button:hover {
     border: 2px solid var(--text-color);
     border-radius: 50%;
     margin-right: 10px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
 }
 
 .icon-circle:hover {
@@ -385,41 +386,81 @@ button:hover {
     border-radius: 10px;
 }
 
-.contact .heading{
-    padding-top: 10px;
-    font-size: 27px;
-}
+
 
 .contact {
-    padding: 3rem;
-    text-align: center;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    background: url('../../img/index/main-img.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+
 }
 
-.contact h2 {
+
+.container {
+    display: flex; 
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-left {
+    flex: 1; 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px);
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-left h1 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.contact-left p {
+    color: var(--text-color);
+}
+
+.contact-right {
+    flex: 2; 
+    text-align: center;
+    color: var(--text-color);
+    position: relative; 
+}
+
+.contact-right h2 {
     margin-bottom: 3rem;
     color: var(--main-color);
 }
 
-.contact form {
+.contact-right form {
     max-width: 70rem;
     margin: 1rem auto;
     margin-bottom: 3rem;
-    background-color: var(--bg-color); 
-    /*border-radius: 0.8rem;*/
-    /*box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.contact form .input-box {
+.contact-right form .input-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.contact form input[type="text"],
-.contact form input[type="email"],
-.contact form textarea {
+.contact-right form input[type="text"],
+.contact-right form input[type="email"],
+.contact-right form textarea {
     width: calc(100% - 20px);
     margin: 10px;
     padding: 1.5rem;
@@ -431,7 +472,7 @@ button:hover {
     resize: none;
 }
 
-.contact form .btn {
+.contact-right form .btn {
     margin-top: 2rem;
     background-color: var(--main-color);
     color: white;
@@ -441,17 +482,16 @@ button:hover {
     cursor: pointer;
     font-size: 1.6rem;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-
 }
 
-.contact form .btn:hover {
+.contact-right form .btn:hover {
     background-color: var(--hover-main-color);
     transform: scale(1.05); 
 }
 
-.contact form input:focus,
-.contact form textarea:focus {
+.contact-right form input:focus,
+.contact-right form textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 5px var(--accent-color); 
+    box-shadow: 0 0 5px var(--accent-color);
 }

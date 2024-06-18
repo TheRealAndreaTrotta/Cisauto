@@ -27,19 +27,25 @@
     <section class="about" id="about"></section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">CONTATTACI</h2>
-
-        <form action="https://formcarry.com/s/QvT0RXRTFsk" method="POST">
-
-            <div class="input-box">
-                <input id="name" type="text" name="name" placeholder="Nome" required/>
-                <input id="email" type="email" name="email" placeholder="Email" required/>
-                <textarea id="textArea" name="subject" placeholder="Oggetto" required></textarea>
-                <textarea id="textarea" name="textarea" cols="30" rows="10" placeholder="Testo" required></textarea>
+        <div class="container">
+            <div class="contact-left">
+                <h2>Il Nostro Titolo</h2>
+                <p>Questa è una descrizione della sezione sinistra con un effetto di sfocatura trasparente.</p>
             </div>
-
-            <input type="submit" value="INVIA EMAIL" class="btn">
-        </form>
+            <div class="contact-right">
+                <div class="icon-circle">i</div>
+                <h2>Contattaci</h2>
+                <form id="contactForm" action="#">
+                    <div class="input-box">
+                        <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+                        <input type="email" id="email" name="email" placeholder="La tua email" required>
+                        <input type="text" id="subject" name="subject" placeholder="Oggetto" required>
+                        <textarea id="message" name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Invia messaggio</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- FOOTER --> 
