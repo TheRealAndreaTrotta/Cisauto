@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function checkScroll() {
         const contactPosition = contactSection.getBoundingClientRect().top;
-
         const windowHeight = window.innerHeight;
 
         if (contactPosition < windowHeight * 0.55) {
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const newsletterPosition = newsletterSection.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        if (newsletterPosition < windowHeight * 0.70) {
+        if (newsletterPosition < windowHeight * 0.90) {
             newsletterSection.classList.add('active');
         } else {
             newsletterSection.classList.remove('active');
