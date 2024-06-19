@@ -25,3 +25,20 @@ function toggleRotation(iconId) {
         content.classList.add('active');
     }
 }
+
+// SEND BUTTON
+const button = document.querySelector("button");
+
+const clear =()=>{
+    setTimeout(() => {
+        button.classList.remove("effect2");
+    }, 1000);
+}
+
+button.addEventListener("click", () => {
+    button.classList.add("effect1");
+    setTimeout(() => {
+        button.classList.remove("effect1");
+        button.classList.add("effect2");
+    }, 2000);
+});

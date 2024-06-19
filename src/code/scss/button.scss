@@ -1,0 +1,70 @@
+
+:root{
+    --main-color: #D4AF37;
+    --hover-main-color: #f3bc08;
+
+    --bg-color: rgb(24, 24, 24);
+    --second-bg-color: rgb(48, 48, 48);
+    --third-bg-color: #fff;
+
+    --text-color: #fff;
+    --second-text-color: rgb(24, 24, 24);
+
+    --accent-color: #ff9800;
+}
+
+.sub-button {
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 25rem;
+    height: 5.5rem;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    border-radius: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--hover-main-color);
+        transform: scale(1.05); 
+    }
+
+    &:active {
+        letter-spacing: 0.2rem;
+    }
+
+    &::before {
+        content: "INVIA";
+    }
+}
+
+.effect1 {
+    width: 4rem;
+    border-color: var(--main-color);
+    border-width: 0.3rem;
+    border-right-color: var(--main-color);
+    animation: rotate 1s linear infinite;
+    font-size: 0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(260deg);
+    }
+}
+
+.effect2 {
+    background-color: var(--main-color);
+
+    &::before {
+        content: "INVIA";
+        font-family: "Poppins", sans-serif;
+        color: var(--third-bg-color);
+        font-size: 1.5rem;
+    }
+}
