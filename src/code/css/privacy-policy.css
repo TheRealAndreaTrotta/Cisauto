@@ -126,7 +126,7 @@ body{
     font-weight: lighter;
 }
 
-.contact {
+.pp-contact {
     width: 50rem;
     padding: 20px;
     margin: auto;
@@ -135,20 +135,20 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-.contact form{
+.pp-contact form{
     max-width: 50rem;
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.contact form .input-box{
+.pp-contact form .input-box{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.contact form .input-box input, .contact form textarea{
+.pp-contact form .input-box input, .contact form textarea{
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;

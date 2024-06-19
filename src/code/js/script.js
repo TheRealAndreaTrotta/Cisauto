@@ -1,16 +1,29 @@
 //NAV-BAR BORDER BOTTOM
 document.addEventListener('DOMContentLoaded', function() {
-    const navbarLinks = document.querySelectorAll('.navbar a');
+    const sections = document.querySelectorAll('section'); 
+    const navbarLinks = document.querySelectorAll('.navbar a'); 
 
-    navbarLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Rimuovi la classe 'active' da tutti i link
-            navbarLinks.forEach(navLink => navLink.classList.remove('active'));
-            // Aggiungi la classe 'active' al link cliccato
-            this.classList.add('active');
+    function updateNavbar() {
+        let scrollPosition = window.scrollY;
+
+        sections.forEach(section => {
+            if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                let sectionId = section.getAttribute('id');
+                navbarLinks.forEach(link => {
+                    if (link.getAttribute('href').substring(1) === sectionId) {
+                        navbarLinks.forEach(navLink => navLink.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                });
+            }
         });
-    });
+    }
+
+    updateNavbar();
+
+    window.addEventListener('scroll', updateNavbar);
 });
+
 
 //CURTAIN EFFECT
 function toggleRotation(iconId) {
@@ -26,4 +39,25 @@ function toggleRotation(iconId) {
     }
 }
 
-// SEND BUTTON
+// MAGIC TRICK
+document.addEventListener('DOMContentLoaded', function() {
+    const contactSection = document.querySelector('.contact');
+
+    function checkScroll() {
+        const contactPosition = contactSection.getBoundingClientRect().top;
+
+        const windowHeight = window.innerHeight;
+
+        if (contactPosition < windowHeight * 0.55) {
+            contactSection.querySelector('.contact-right').classList.add('active');
+        } else {
+            contactSection.querySelector('.contact-right').classList.remove('active');
+        }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    window.addEventListener('resize', checkScroll);
+
+    checkScroll();
+});
+

@@ -108,6 +108,13 @@ button:hover {
     position: relative;
 }
 
+/*
+.navbar a.active {
+    font-weight: bold;  
+    color: var(--main-color); 
+}
+*/
+
 .navbar a::after {
     content: '';
     position: absolute;
@@ -175,11 +182,120 @@ button:hover {
     color: var(--text-color);
 }
 
-/*GOOGLE MAPS*/
-.maps iframe {
-    width: 100%; 
-    height: 450px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+.contact {
+    background: url('../../img/index/main-img.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex; 
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--bg-color);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-left {
+    flex: 1; 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3); 
+    border-radius: 8px 0 0 8px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../img/agency/certificato.png'); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.contact-right {
+    flex: 2; 
+    text-align: center;
+    color: var(--text-color);
+    position: relative; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact-right.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-right h1 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    color: var(--main-color);
+}
+
+.contact-right h2 {
+    margin-bottom: 3rem;
+    color: var(--main-color);
+}
+
+.contact-right form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-right form .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-right form input[type="text"],
+.contact-right form input[type="email"],
+.contact-right form textarea {
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    resize: none;
+}
+
+.contact-right form .btn {
+    margin-top: 2rem;
+    background-color: var(--main-color);
+    color: white;
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.contact-right form .btn:hover {
+    background-color: var(--hover-main-color);
+    transform: scale(1.05); 
+}
+
+.contact-right form input:focus,
+.contact-right form textarea:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
 }
 
 /*NEWSLETTER*/
@@ -203,6 +319,13 @@ button:hover {
     font-size: 15px;
     margin-top: 10px;
     padding: 10px;
+}
+
+/*GOOGLE MAPS*/
+.maps iframe {
+    width: 100%; 
+    height: 450px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 /*FOOTER 1*/
@@ -382,123 +505,4 @@ button:hover {
 ::-webkit-scrollbar-track{
     background-color: var(--bg-color);
     border-radius: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.contact {
-    background: url('../../img/index/main-img.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
-    position: relative;
-    overflow: hidden;
-    height: 80vh;
-
-}
-
-
-.container {
-    display: flex; 
-    width: 80%;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: var(--bg-color);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.contact-left {
-    flex: 1; 
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.3); 
-    border-radius: 8px 0 0 8px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../../img/agency/certificato.png'); 
-    background-size: cover; 
-    background-position: center; 
-}
-
-.contact-right {
-    flex: 2; 
-    text-align: center;
-    color: var(--text-color);
-    position: relative; 
-}
-
-.contact-right h1 {
-    font-size: 5rem;
-    margin-bottom: 3rem;
-    color: var(--main-color);
-}
-
-.contact-right h2 {
-    margin-bottom: 3rem;
-    color: var(--main-color);
-}
-
-.contact-right form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    margin-bottom: 3rem;
-    background-color: var(--bg-color);
-    padding: 2rem;
-    border-radius: 0.8rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.contact-right form .input-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.contact-right form input[type="text"],
-.contact-right form input[type="email"],
-.contact-right form textarea {
-    width: calc(100% - 20px);
-    margin: 10px;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--bg-color);
-    border-radius: 0.8rem;
-    border: 2px solid var(--main-color);
-    resize: none;
-}
-
-.contact-right form .btn {
-    margin-top: 2rem;
-    background-color: var(--main-color);
-    color: white;
-    padding: 1.5rem 3rem;
-    border: none;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    font-size: 1.6rem;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.contact-right form .btn:hover {
-    background-color: var(--hover-main-color);
-    transform: scale(1.05); 
-}
-
-.contact-right form input:focus,
-.contact-right form textarea:focus {
-    outline: none;
-    border-color: var(--main-color);
-    box-shadow: 0 0 15px var(--main-color);
 }
