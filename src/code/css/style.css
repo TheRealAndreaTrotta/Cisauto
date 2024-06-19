@@ -306,19 +306,12 @@ button:hover {
     align-items: center;
     text-align: center;
     padding: 8rem;
-}
-
-.newsletter h1,
-.newsletter p,
-.newsletter button {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.newsletter.active h1,
-.newsletter.active p,
-.newsletter.active button {
+.newsletter.active {
     opacity: 1;
     transform: translateY(0);
 }
@@ -336,6 +329,28 @@ button:hover {
     margin-top: 10px;
     padding: 10px;
 }
+
+.newsletter button {
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 12rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.newsletter button:hover {
+    background-color: var(--hover-main-color);
+    transform: scale(1.05);
+}
+
+
+
 
 
 /*GOOGLE MAPS*/

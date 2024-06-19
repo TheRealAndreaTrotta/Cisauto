@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const newsletterPosition = newsletterSection.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        if (newsletterPosition < windowHeight * 0.98) {
+        if (newsletterPosition < windowHeight * 0.70) {
             newsletterSection.classList.add('active');
         } else {
             newsletterSection.classList.remove('active');
@@ -78,7 +78,5 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkScroll);
     window.addEventListener('resize', checkScroll);
 
-    checkScroll(); // Controlla lo stato iniziale al caricamento della pagina
+    checkScroll(); 
 });
-
-
