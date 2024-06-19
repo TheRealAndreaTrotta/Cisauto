@@ -61,3 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
     checkScroll();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterSection = document.querySelector('.newsletter');
+
+    function checkScroll() {
+        const newsletterPosition = newsletterSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (newsletterPosition < windowHeight * 0.98) {
+            newsletterSection.classList.add('active');
+        } else {
+            newsletterSection.classList.remove('active');
+        }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    window.addEventListener('resize', checkScroll);
+
+    checkScroll(); // Controlla lo stato iniziale al caricamento della pagina
+});
+
+
