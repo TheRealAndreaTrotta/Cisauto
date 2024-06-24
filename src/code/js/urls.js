@@ -3,6 +3,11 @@ var address = "https://maps.app.goo.gl/jredbZaqToeCXEv89";
 var phone = "tel:+393495518640";
 var email = "mailto:Cisautosrl@gmail.com";
 
+// WARRANTY URLS
+var system_easy = "system-warranty.html";
+var system_high = "system-warranty.html#high";
+var system_super = "system-warranty.html#super";
+
 // SALES PLATFORM URLS
 var autoscout24 = "https://www.autoscout24.it/concessionari/cisauto-group";
 var subito = "https://impresapiu.subito.it/shops/25148-cisauto-group";
@@ -32,6 +37,12 @@ var rewardAnticounterfeiting = "";
 document.getElementById("addressLink").setAttribute("href", address);
 document.getElementById("phoneLink").setAttribute("href", phone);
 document.getElementById("emailLink").setAttribute("href", email);
+
+
+// WARRANTY URLS
+document.getElementById("seasyLink").setAttribute("href", system_easy);
+document.getElementById("shighLink").setAttribute("href", system_high);
+document.getElementById("ssuperLink").setAttribute("href", system_super)
 
 // SALES PLATFORM URLS
 document.getElementById("autoscout24Link").setAttribute("href", autoscout24);

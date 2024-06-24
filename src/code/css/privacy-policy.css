@@ -116,14 +116,16 @@ body{
 }
 
 /* FORMS  */
-.pre-form{
+.pre-form {
     text-align: center;
     width: 82rem;
     margin: auto;
+    padding: 2rem;
 }
 
-.pre-form h2{
+.pre-form h2 {
     font-weight: lighter;
+    font-size: 2rem; 
 }
 
 .pp-contact {
@@ -132,23 +134,24 @@ body{
     margin: auto;
     background-color: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.pp-contact form{
+.pp-contact form {
     max-width: 50rem;
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.pp-contact form .input-box{
+.pp-contact form .input-box {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.pp-contact form .input-box input, .contact form textarea{
+.pp-contact form .input-box input,
+.pp-contact form textarea {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
@@ -163,11 +166,16 @@ body{
 .form-button {
     background: var(--main-color);
     color: var(--text-color);
-    font-size: 15px;
+    font-size: 1.5rem; 
     margin-top: 20px;
-    padding: 10px;
+    padding: 1rem;
     width: 40rem;
     height: 5.5rem;
     border-radius: 0.8rem;
     transition: transform 0.3s ease-in-out;
+}
+
+.form-button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
