@@ -84,13 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 window.addEventListener('scroll', function() {
+    let scrollPosition = window.pageYOffset;
+
     let parallax1 = document.getElementById('parallax-1');
     let parallax2 = document.getElementById('parallax-2');
     let parallax3 = document.getElementById('parallax-3');
     
-    let scrollPosition = window.pageYOffset;
-
-    parallax1.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
-    parallax2.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+    // Applicare velocità diverse per ciascun elemento parallax
+    parallax1.style.backgroundPositionY = scrollPosition * 0.4 + 'px';
+    parallax2.style.backgroundPositionY = scrollPosition * 0.3 + 'px';
     parallax3.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
 });
