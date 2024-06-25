@@ -80,7 +80,23 @@ document.addEventListener('DOMContentLoaded', function() {
     checkScrollNewsletter();
 });
 
-
+// ZOOM-OUT
+document.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY || window.pageYOffset;
+    var zoomElement = document.getElementById('zoom-image'); // Cambia l'ID se usi un video
+  
+    // Calcola la scala in base alla posizione di scorrimento
+    var scale = 1 - scrollPosition / (window.innerHeight * 2); // Modifica il fattore per regolare l'effetto di zoom
+  
+    // Limita la scala minima (opzionale)
+    if (scale < 0.5) {
+      scale = 0.5; // Impedisce di ridurre troppo l'elemento
+    }
+  
+    // Applica la trasformazione di scala all'elemento
+    zoomElement.style.transform = 'scale(' + scale + ')';
+  });
+  
 
 // PARALLAX
 window.addEventListener('scroll', function() {
@@ -116,8 +132,8 @@ function componentToHex(c) {
     var fraction = Math.min(scrollPosition / homeHeight, 1);
   
     // Colori di partenza e arrivo per il body
-    var startColor = { r: 255, g: 255, b: 255 }; // Bianco
-    var endColor = { r: 0, g: 0, b: 0 };  // Nero
+    var startColor = { r: 0, g: 0, b: 0 }; // Bianco
+    var endColor = { r: 255, g: 255, b: 255 };  // Nero
   
     // Calcola i nuovi valori RGB
     var newR = Math.round(startColor.r + (endColor.r - startColor.r) * fraction);
