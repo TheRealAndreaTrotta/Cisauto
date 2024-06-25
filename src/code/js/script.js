@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+// PARALLAX
 window.addEventListener('scroll', function() {
     let scrollPosition = window.pageYOffset;
 
@@ -95,3 +95,37 @@ window.addEventListener('scroll', function() {
     parallax2.style.backgroundPositionY = scrollPosition * 0.3 + 'px';
     parallax3.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
 });
+
+
+// CHANGE COLOR BG
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+  }
+  
+  function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+  }
+  
+  document.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY || window.pageYOffset;
+    var homeSection = document.getElementById('home');
+    var homeHeight = homeSection.offsetHeight;
+  
+    // Frazione della sezione home in cui avviene la transizione del colore di sfondo
+    var fraction = Math.min(scrollPosition / homeHeight, 1);
+  
+    // Colori di partenza e arrivo per il body
+    var startColor = { r: 255, g: 255, b: 255 }; // Bianco
+    var endColor = { r: 0, g: 0, b: 0 };  // Nero
+  
+    // Calcola i nuovi valori RGB
+    var newR = Math.round(startColor.r + (endColor.r - startColor.r) * fraction);
+    var newG = Math.round(startColor.g + (endColor.g - startColor.g) * fraction);
+    var newB = Math.round(startColor.b + (endColor.b - startColor.b) * fraction);
+  
+    // Converti in formato hex e applica il nuovo colore di sfondo
+    var newColor = rgbToHex(newR, newG, newB);
+    document.body.style.backgroundColor = newColor;
+  });
+  

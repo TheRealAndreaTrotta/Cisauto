@@ -1,0 +1,10 @@
+body {
+    transition: background-color 0.1s linear;
+    background-color: white; /* Colore iniziale */
+  }
+  
+  .content {
+    height: 2000px; /* Aumenta l'altezza per consentire lo scorrimento */
+    padding: 20px;
+  }
+  

@@ -55,6 +55,7 @@ html{
 body{
     background-color: white;
     color: var(--text-color);
+    transition: background-color 0.1s linear;
 }
 
 button {
@@ -207,13 +208,18 @@ button:hover {
     background-image: url('../../img/index/main-img2.jpg');
 }
 
-.content {
+.parallax-content {
     height: 100%;
     padding: 50px;
     text-align: center;
     background-color: black;
 }
 
+
+.content {
+    height: 1000px; /* Aumenta l'altezza per consentire lo scorrimento */
+    padding: 20px;
+  }
 
 /*CONTACT*/
 .contact {
