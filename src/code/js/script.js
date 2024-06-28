@@ -217,4 +217,16 @@ function componentToHex(c) {
 
 
 
+// script.js
+
+function showArrow(element) {
+    var arrow = element.querySelector('.arrow');
+    arrow.classList.add('active');
+  }
+  
+  function hideArrow(element) {
+    var arrow = element.querySelector('.arrow');
+    arrow.classList.remove('active');
+  }
+  
   
