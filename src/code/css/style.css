@@ -174,6 +174,13 @@ button:hover {
     color: var(--main-color);
 }
 
+#parallax-1 {
+    height: 100vh;
+    background: url('../../img/index/main-img.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*ABOUT*/
 .about{
     display: flex;
     justify-content: center;
@@ -183,35 +190,159 @@ button:hover {
     color: var(--text-color);
 }
 
+#about {
+    margin-top: 200px; /* Aggiungi lo spazio desiderato tra le sezioni */
+  }
+  
 
-
-
-.parallax {
-    min-height: 500px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    width: 100%;
-    height: 100vh;
-}
-
-#parallax-1 {
-    background-image: url('../../img/index/main-img.jpg');
-}
-
-.parallax-content {
-    height: 10vh;
-    padding: 50px;
+#container {
+    height: 200vh; /* Per avere abbastanza spazio per lo scroll */
+    padding-top: 50px;
+    background-color: #f0f0f0;
+    position: relative;
     text-align: center;
-    background-color: black;
 }
 
+#text {
+    font-size: 27px;
+    opacity: 0;
+    transform: translateY(100px);
+    color: #000;
+    transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease;
+    position: relative;
+    padding: 300px;
+}
+
+#text.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
 
 .content {
-    height: 1000px; /* Aumenta l'altezza per consentire lo scorrimento */
+    text-align: center;
     padding: 20px;
+    height: 1000px;
+}
+
+.content h1, .content p {
+    font-size: 27px;
+    transition: color 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styles.css */
+
+  
+  .auto-annuncio {
+    width: 400px; /* Larghezza desiderata del riquadro */
+    border: 2px solid #ddd; /* Bordo solido più moderno */
+    /*border-radius: 10px;  Bordi arrotondati */
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    transition: box-shadow 0.3s ease;
+    position: relative;
   }
+  
+  .auto-annuncio:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombra più evidente al passaggio del mouse */
+  }
+  
+  .immagine-auto {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .immagine-auto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .auto-annuncio:hover .immagine-auto img {
+    transform: scale(1.1); /* Ingrandimento dell'immagine al passaggio del mouse */
+  }
+  
+  .informazioni {
+    background-color: #fff; /* Sfondo bianco per le informazioni */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .informazioni h3 {
+    color: var(--second-text-color);
+    margin-top: 0;
+    font-size: 24px; /* Testo più grande per il titolo */
+  }
+  
+  .informazioni p {
+    font-size: 18px; /* Testo più grande per le informazioni */
+  }
+  
+  .arrow {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.1); /* Colore iniziale della freccia */
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    transition: background-color 0.3s ease;
+  }
+  
+  .auto-annuncio:hover .arrow {
+    background-color: rgba(0, 0, 0, 0.3); /* Colore leggermente più scuro al passaggio del mouse */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*CONTACT*/
 .contact {

@@ -3,142 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zoom Out on Scroll with Parallax and Color Transition</title>
+  <title>Scroll Effect</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      overflow-x: hidden; /* Evita lo scrolling orizzontale */
     }
 
-    /* Stili per la sezione home con parallax */
-    .home {
-      width: 100%;
-      height: 100vh;
-      background: url('../../img/index/main-img.jpg') no-repeat center center/cover;
-      background-attachment: fixed;
+    #container {
+      height: 200vh; /* Per avere abbastanza spazio per lo scroll */
+      padding-top: 50px;
+      background-color: #f0f0f0;
       position: relative;
-      overflow: hidden;
     }
 
-    .home-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      margin-top: 3rem;
-      color: white; /* Colore del testo */
+    #text {
+      font-size: 24px;
+      opacity: 0;
+      transform: translateY(100px);
+      color: #000;
+      transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease;
+      position: absolute;
+      top: 50px;
     }
 
-    .home-content h3 {
-      margin-top: 2rem;
-      font-size: 3.5rem;
-    }
-
-    .home-content h1 {
-      font-size: 7rem;
-      font-weight: 700;
-      margin-top: 1.5rem;
-      line-height: 1;
-    }
-
-    .logo span {
-      color: var(--main-color);
-    }
-
-    /* Stili per la sezione di zoom con effetto di zoom-out */
-    #zoom-section {
-      position: relative;
-      height: 100vh; /* Altezza pari alla viewport per garantire uno scrolling lungo */
-      overflow: hidden; /* Nasconde il contenuto oltre l'altezza specificata */
-    }
-
-    .zoom-container {
-      position: relative;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden; /* Nasconde parti dell'immagine oltre il container */
-    }
-
-    #zoom-image {
-      max-width: 100%;
-      max-height: 100%;
-      transition: transform 0.3s ease-out;
-    }
-
-    /* Stili per il parallax */
-    .parallax {
-      min-height: 500px; /* Altezza minima per il parallax */
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      height: 100vh; /* Altezza pari alla viewport per coprire l'intero schermo */
-    }
-
-    .parallax-content {
-      height: 100%;
-      padding: 50px;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.6); /* Colore di sfondo per il contenuto parallax */
-      color: white; /* Colore del testo */
-    }
-
-    .content {
-      height: 1000px; /* Aumenta l'altezza per consentire lo scorrimento */
-      padding: 20px;
+    #text.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
-
-  <!-- Sezione con parallax e contenuto -->
-  <section class="home" id="home">
-    <div class="parallax-content home-content">
-      <h1>Benvenuto al nostro sito</h1>
-      <h3>Scopri le nostre offerte speciali!</h3>
-      <p>Questo è un esempio di effetto parallax con un testo centrato.</p>
-    </div>
-  </section>
-
-  <!-- Sezione con effetto di zoom-out -->
-  <section id="zoom-section">
-    <div class="zoom-container">
-      <img src="main-img2.jpg" alt="Zoom Out Image" id="zoom-image">
-    </div>
-  </section>
-
-  <!-- Contenuto normale -->
-  <section class="content">
-    <h1>Scroll down to see the color transition</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor, sapien a pharetra venenatis, quam augue blandit turpis, nec finibus est sapien ut tortor. Integer dictum turpis nec tortor feugiat, at vehicula risus facilisis. Nulla facilisi. Vivamus a cursus orci. Vivamus auctor elit id justo cursus vestibulum. Fusce in lectus nisl. Curabitur id ligula leo. Sed nec magna in metus fermentum tincidunt ut non elit. Suspendisse potenti. Etiam bibendum luctus libero, ac vestibulum leo lacinia eu. Donec sit amet eros ut nisl accumsan tincidunt.</p>
-    <!-- Aggiungi altro contenuto per creare una pagina lunga -->
-    <p style="margin-top: 10px;">More content here...</p>
-  </section>
-
-  <!-- JavaScript per l'effetto di zoom-out -->
+  <div id="container">
+    <div id="text">Questo è il testo che appare dal basso verso l'alto con lo scroll.</div>
+  </div>
   <script>
     document.addEventListener('scroll', function() {
+      var textElement = document.getElementById('text');
       var scrollPosition = window.scrollY || window.pageYOffset;
-      var zoomSection = document.getElementById('zoom-section');
-      var fraction = scrollPosition / (document.documentElement.scrollHeight - window.innerHeight);
 
-      // Calcola la scala per l'effetto di zoom-out
-      var zoomImage = document.getElementById('zoom-image');
-      var scale = 1 - scrollPosition / (window.innerHeight * 2); // Modifica il fattore per regolare l'effetto di zoom
+      // Punto in cui il testo dovrebbe iniziare ad apparire
+      var startAppearingPoint = 100;
 
-      // Limita la scala minima (opzionale)
-      if (scale < 0.5) {
-        scale = 0.5; // Impedisce di ridurre troppo l'elemento
+      // Altezza del viewport in cui il colore dovrebbe completare la transizione
+      var endAppearingPoint = 300;
+
+      // Verifica se il testo è già stato visualizzato
+      var textVisible = textElement.classList.contains('visible');
+
+      // Se il testo non è ancora visibile e si scorre in basso
+      if (!textVisible && scrollPosition > startAppearingPoint) {
+        textElement.classList.add('visible');
+        // Calcola la progressione del colore in base alla posizione di scorrimento
+        var fraction = Math.min((scrollPosition - startAppearingPoint) / (endAppearingPoint - startAppearingPoint), 1);
+        var colorValue = Math.round(fraction * 255);
+        textElement.style.color = 'rgb(' + colorValue + ',' + colorValue + ',' + colorValue + ')';
       }
 
-      // Applica la trasformazione di scala all'immagine
-      zoomImage.style.transform = 'scale(' + scale + ')';
+      // Se il testo è già visibile, mantieni il colore finale
+      if (scrollPosition > endAppearingPoint) {
+        textElement.style.color = 'rgb(255, 255, 255)'; // Colore finale bianco
+      } else if (textVisible) {
+        textElement.style.color = 'rgb(0, 0, 0)';
+      } else {
+        textElement.style.color = 'rgb(0, 0, 0)'; // Colore iniziale nero
+      }
     });
   </script>
-
 </body>
 </html>
