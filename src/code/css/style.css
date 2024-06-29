@@ -231,87 +231,67 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*SERVICES*/
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
   
-/* styles.css */
-
-  
-  .auto-annuncio {
+.auto-annuncio {
     width: 400px; /* Larghezza desiderata del riquadro */
     border: 2px solid #ddd; /* Bordo solido più moderno */
     border-radius: 10px; /* Bordi arrotondati */
     overflow: hidden;
-    margin: 20px;
+    margin: 10px; /* Riduzione del margine per avvicinare gli annunci */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
     transition: box-shadow 0.3s ease;
     position: relative;
-  }
+}
   
-  .auto-annuncio:hover {
+.auto-annuncio:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombra più evidente al passaggio del mouse */
-  }
+}
   
-  .immagine-auto {
+.immagine-auto {
     position: relative;
     overflow: hidden;
-  }
+}
   
-  .immagine-auto img {
+.immagine-auto img {
     width: 100%; /* Occupa tutta la larghezza disponibile */
     height: auto; /* Altezza automatica per mantenere l'aspetto proporzionato */
     display: block;
     transition: transform 0.3s ease;
-  }
+}
   
-  .auto-annuncio:hover .immagine-auto img {
+.auto-annuncio:hover .immagine-auto img {
     transform: scale(1.1); /* Ingrandimento dell'immagine al passaggio del mouse */
-  }
+}
   
-  .informazioni {
-    background-color: #fff; /* Sfondo bianco per le informazioni */
+.informazioni {
+    color: var(--second-text-color);
+    background-color: var(--third-bg-color); /* Sfondo bianco per le informazioni */
     padding: 10px; /* Spaziatura interna più compatta */
     box-sizing: border-box;
     height: 50%; /* Altezza pari alla metà del contenitore */
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+}
   
-  .informazioni h3 {
+.informazioni h3 {
     margin-top: 0;
     font-size: 24px; /* Testo più grande per il titolo */
-  }
+}
   
-  .informazioni p {
+.informazioni p {
     font-size: 18px; /* Testo più grande per le informazioni */
     margin-bottom: 5px;
-  }
+}
   
-  .arrow {
+.arrow {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -320,16 +300,18 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.1); /* Colore iniziale della freccia */
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
     transition: background-color 0.3s ease;
-    opacity: 0; /* Freccia inizialmente nascosta */
-  }
+    opacity: 1;
+}
   
-  .arrow.active {
+.arrow.active {
     opacity: 1; /* Freccia visibile quando attiva */
-  }
+}
   
-  .auto-annuncio:hover .arrow {
-    background-color: rgba(0, 0, 0, 0.3); /* Colore leggermente più scuro al passaggio del mouse */
-  }
+.auto-annuncio:hover .arrow {
+    background-color: var(--main-color); /* Colore leggermente più scuro al passaggio del mouse */
+}
+  
+  
   
 
 
