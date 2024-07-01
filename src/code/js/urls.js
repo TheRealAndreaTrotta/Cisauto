@@ -46,19 +46,11 @@ document.getElementById("ssuperLink").setAttribute("href", system_super)
 
 // SALES PLATFORM URLS
 document.getElementById("autoscout24Link").setAttribute("href", autoscout24);
-document.getElementById("autoscout24Link").innerText = "Autoscout24";
-
 document.getElementById("subitoLink").setAttribute("href", subito);
-document.getElementById("subitoLink").innerText = "Subito";
-
 
 // PARTNERS URLS
 document.getElementById("mooveLink").setAttribute("href", moove);
-document.getElementById("mooveLink").innerText = "Moove";
-
 document.getElementById("nppicLink").setAttribute("href", nppic);
-document.getElementById("nppicLink").innerText = "NPPIC";
-
 
 // SOCIAL URLS
 document.getElementById("googleLink").setAttribute("href", google);
