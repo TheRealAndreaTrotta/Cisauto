@@ -251,6 +251,84 @@ button:hover {
     transition: color 0.5s ease;
 }
 
+
+
+
+
+
+.hero {
+    height: 100vh; /* Altezza della sezione al 100% della viewport */
+    display: flex;
+    flex-direction: column;
+    color: var(--second-text-color); /* Colore del testo bianco */
+}
+
+.hero-header {
+    padding-left: 55rem;
+    text-align: left;
+}
+
+.hero-content {
+    color: var(--second-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 63rem;
+    padding-right: 55rem;
+    opacity: 0; /* Inizialmente nascosto */
+    transform: translateY(100px); /* Spostato verso il basso */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transizioni per l'animazione */
+}
+
+.hero-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.hero h1,
+.hero p {
+    font-size: 1.5rem; /* Applicato lo stesso stile di font-size per h1 e p */
+    margin-bottom: 2rem; /* Margin bottom uniforme per tutti i paragrafi */
+}
+
+.hero-content.visible {
+    opacity: 1; /* Reso visibile */
+    transform: translateY(0); /* Posizione normale */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*SERVICES*/
 .services {
     display: flex;
@@ -330,31 +408,6 @@ button:hover {
 .auto-annuncio:hover .arrow {
     background-color: var(--main-color); /* Colore leggermente più scuro al passaggio del mouse */
 }
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*CONTACT*/
 .contact {
