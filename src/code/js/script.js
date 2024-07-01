@@ -115,14 +115,21 @@ window.addEventListener('scroll', function() {
 
 // HERO APPEAR
 document.addEventListener('DOMContentLoaded', function() {
+  var heroHeader = document.querySelector('.hero-header');
   var heroContent = document.querySelector('.hero-content');
 
   function checkVisibility() {
-      var rect = heroContent.getBoundingClientRect();
+      var rectHeader = heroHeader.getBoundingClientRect();
+      var rectContent = heroContent.getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
 
-      // Verifica se il testo è visibile per almeno il 75% 
-      if (rect.top < viewHeight * 0.75 && rect.bottom > 0) {
+      // Verifica se l'header è visibile per almeno il 75%
+      if (rectHeader.top < viewHeight * 0.75 && rectHeader.bottom > 0) {
+          heroHeader.classList.add('visible');
+      }
+
+      // Verifica se il contenuto è visibile per almeno il 75%
+      if (rectContent.top < viewHeight * 0.75 && rectContent.bottom > 0) {
           heroContent.classList.add('visible');
       }
   }
@@ -131,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', checkVisibility);
   checkVisibility(); // Verifica la visibilità al caricamento della pagina
 });
+
 
 
 
