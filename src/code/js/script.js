@@ -26,59 +26,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // CURTAIN EFFECT
-function toggleRotation(iconId) {
-    const icon = document.getElementById(iconId);
-    const content = icon.parentElement.parentElement.nextElementSibling;
-
-    if (content.classList.contains('active')) {
-        icon.classList.remove('rotated');
-        content.classList.remove('active');
-    } else {
-        icon.classList.add('rotated');
-        content.classList.add('active');
-    }
-}
-
-// APPARITION EFFECT
 document.addEventListener('DOMContentLoaded', function() {
-    const contactSection = document.querySelector('.contact');
-    let contactActivated = false; 
+  const heroHeader = document.querySelector('.hero-header');
+  const heroContent = document.querySelector('.hero-content');
+  const contactSection = document.querySelector('.contact');
+  const contactRight = contactSection.querySelector('.contact-right');
+  const newsletterSection = document.querySelector('.newsletter');
+  
+  function checkVisibility(element, fraction, className) {
+      const rect = element.getBoundingClientRect();
+      const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
 
-    function checkScrollContact() {
-        const contactPosition = contactSection.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+      if (rect.top < viewHeight * fraction && rect.bottom > 0) {
+          element.classList.add(className);
+      } else {
+          element.classList.remove(className);
+      }
+  }
 
-        if (contactPosition < windowHeight * 0.55 && !contactActivated) {
-            contactSection.querySelector('.contact-right').classList.add('active');
-            contactActivated = true; // Segna come attivato
-        }
-    }
+  function onScroll() {
+      checkVisibility(heroHeader, 0.75, 'visible');
+      checkVisibility(heroContent, 0.75, 'visible');
+      checkVisibility(contactRight, 0.55, 'active');
+      checkVisibility(newsletterSection, 0.90, 'active');
+  }
 
-    window.addEventListener('scroll', checkScrollContact);
-    window.addEventListener('resize', checkScrollContact);
-
-    checkScrollContact();
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('resize', onScroll);
+  onScroll(); // Verifica la visibilità al caricamento della pagina
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const newsletterSection = document.querySelector('.newsletter');
-    let newsletterActivated = false; 
-
-    function checkScrollNewsletter() {
-        const newsletterPosition = newsletterSection.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (newsletterPosition < windowHeight * 0.90 && !newsletterActivated) {
-            newsletterSection.classList.add('active');
-            newsletterActivated = true;
-        }
-    }
-
-    window.addEventListener('scroll', checkScrollNewsletter);
-    window.addEventListener('resize', checkScrollNewsletter);
-
-    checkScrollNewsletter();
-});
 
 // ZOOM-OUT
 document.addEventListener('scroll', function() {
@@ -126,11 +103,15 @@ document.addEventListener('DOMContentLoaded', function() {
       // Verifica se l'header è visibile per almeno il 75%
       if (rectHeader.top < viewHeight * 0.75 && rectHeader.bottom > 0) {
           heroHeader.classList.add('visible');
+      } else {
+          heroHeader.classList.remove('visible');
       }
 
       // Verifica se il contenuto è visibile per almeno il 75%
       if (rectContent.top < viewHeight * 0.75 && rectContent.bottom > 0) {
           heroContent.classList.add('visible');
+      } else {
+          heroContent.classList.remove('visible');
       }
   }
 
@@ -138,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', checkVisibility);
   checkVisibility(); // Verifica la visibilità al caricamento della pagina
 });
+
 
 
 
