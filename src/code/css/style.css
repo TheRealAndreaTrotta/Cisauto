@@ -24,6 +24,22 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'Broche';
+    src: url('../../font/BrocheCut-VGgwZ.woff') format('woff2');
+    font-style: normal;
+    font-weight: normal; /* Aggiunta del peso normale */
+}
+
+
+
+.la-macchina-bold {
+    font-family: 'Broche', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +48,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+    font-family: sans-serif, 'Broche'; /* Sostituisci 'NomeDelTuoFont' con il nome del tuo font desiderato */
 }
 
 :root{
@@ -48,7 +64,7 @@
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 60.0%;
     overflow-x: hidden;
 }
 
@@ -94,7 +110,7 @@ button:hover {
     color: var(--text-color);
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    font-family: "LaMacchina";
+    font-family: "Broche";
 }
 
 .logo:hover{
@@ -107,6 +123,7 @@ button:hover {
     margin-left: 4rem;
     font-weight: 500;
     position: relative;
+    font-family: "Broche";
 }
 
 /*
@@ -181,7 +198,7 @@ button:hover {
 }
 
 /*ABOUT*/
-.about{
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,12 +208,11 @@ button:hover {
 }
 
 #about {
-    margin-top: 200px; /* Aggiungi lo spazio desiderato tra le sezioni */
-  }
-  
+    margin-top: 200px; 
+}
 
 #container {
-    height: 200vh; /* Per avere abbastanza spazio per lo scroll */
+    height: 200vh; 
     padding-top: 50px;
     background-color: #f0f0f0;
     position: relative;
@@ -218,16 +234,24 @@ button:hover {
     transform: translateY(0); 
 }
 
+.span-ab {
+    font-size: 15px;
+    font-family: 'Broche';
+}
+
 .content {
     text-align: center;
-    padding: 20px;
-    height: 1000px;
+    padding-bottom: 200px;
+    padding-right: 200px;
+    padding-left: 200px;
+    height: 300px;
 }
 
 .content h1, .content p {
     font-size: 27px;
     transition: color 0.5s ease;
 }
+
 
 
 
@@ -521,12 +545,16 @@ button:hover {
 .footer ul li p{
     font-size: 15px;
     padding: 3px;
+    font-family: "Broche";
+    font-size: 12px;
 }
 
 .footer ul li a {
     color: var(--text-color);
     border-bottom: 3px solid transparent;
     transition: 0.3s ease-in-out;
+    font-family: "Broche";
+    font-size: 12px;
 }
 
 .footer ul li a:hover {
@@ -593,7 +621,8 @@ button:hover {
 .social a h1 {
     color: var(--text-color);
     margin: 0 10px;
-    font-size: 20px;
+    font-size: 10px;
+    font-family: "Broche";
 }
 
 .social a i:last-child {
@@ -635,6 +664,8 @@ button:hover {
 .legal-footer ul li a {
     color: var(--text-color);
     text-decoration: none;
+    font-family: "Broche";
+    font-size: 9px;
 }
 
 .legal-footer ul li a:hover {
