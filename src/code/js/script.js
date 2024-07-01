@@ -113,6 +113,7 @@ window.addEventListener('scroll', function() {
 });
 
 
+// HERO APPEAR
 document.addEventListener('DOMContentLoaded', function() {
   var heroContent = document.querySelector('.hero-content');
 

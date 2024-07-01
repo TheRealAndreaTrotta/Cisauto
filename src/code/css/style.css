@@ -37,6 +37,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GL';
+    src: url('../../font/GoldbillXlLight-VG7zx.woff') format('woff2');
+    font-style: normal;
+    font-weight: normal; /* Aggiunta del peso normale */
+}
+
+.broche-bold {
+    font-family: 'GL', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -59,6 +71,7 @@
 
     --text-color: #fff;
     --second-text-color: rgb(24, 24, 24);
+    --third-text-color: rgb(82, 82, 82);
 }
 
 html{
@@ -264,7 +277,7 @@ button:hover {
 }
 
 .hero-header {
-    padding-left: 55rem;
+    padding-left: 40rem;
     text-align: left;
 }
 
@@ -273,21 +286,25 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 63rem;
-    padding-right: 55rem;
+    padding-left: 55rem;
+    padding-right: 45rem;
     opacity: 0; /* Inizialmente nascosto */
     transform: translateY(100px); /* Spostato verso il basso */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transizioni per l'animazione */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transizioni per l'animazione */
 }
 
 .hero-header h2 {
+    font-family: 'GL';
+    font-weight: 1000;
+    color: var(--third-text-color);
     font-size: 1.5rem;
     margin: 0;
 }
 
-.hero h1,
 .hero p {
-    font-size: 1.5rem; /* Applicato lo stesso stile di font-size per h1 e p */
+    font-family: 'GL';
+    font-weight: 900;
+    font-size: 2rem; /* Applicato lo stesso stile di font-size per h1 e p */
     margin-bottom: 2rem; /* Margin bottom uniforme per tutti i paragrafi */
 }
 
