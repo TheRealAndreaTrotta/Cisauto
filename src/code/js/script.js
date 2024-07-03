@@ -57,24 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// ZOOM-OUT
-document.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY || window.pageYOffset;
-    var zoomElement = document.getElementById('zoom-image'); // Cambia l'ID se usi un video
-  
-    // Calcola la scala in base alla posizione di scorrimento
-    var scale = 1 - scrollPosition / (window.innerHeight * 2); // Modifica il fattore per regolare l'effetto di zoom
-  
-    // Limita la scala minima (opzionale)
-    if (scale < 0.5) {
-      scale = 0.5; // Impedisce di ridurre troppo l'elemento
-    }
-  
-    // Applica la trasformazione di scala all'elemento
-    zoomElement.style.transform = 'scale(' + scale + ')';
-  });
-  
-
 // PARALLAX
 window.addEventListener('scroll', function() {
     let scrollPosition = window.pageYOffset;
@@ -92,27 +74,31 @@ window.addEventListener('scroll', function() {
 
 // HERO APPEAR
 document.addEventListener('DOMContentLoaded', function() {
-  var heroHeader = document.querySelector('.hero-header');
-  var heroContent = document.querySelector('.hero-content');
+  var heroHeaders = document.querySelectorAll('.hero-header');
+  var heroContents = document.querySelectorAll('.hero-content');
 
   function checkVisibility() {
-      var rectHeader = heroHeader.getBoundingClientRect();
-      var rectContent = heroContent.getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
 
-      // Verifica se l'header è visibile per almeno il 75%
-      if (rectHeader.top < viewHeight * 0.75 && rectHeader.bottom > 0) {
-          heroHeader.classList.add('visible');
-      } else {
-          heroHeader.classList.remove('visible');
-      }
+      heroHeaders.forEach(function(header) {
+          var rectHeader = header.getBoundingClientRect();
 
-      // Verifica se il contenuto è visibile per almeno il 75%
-      if (rectContent.top < viewHeight * 0.75 && rectContent.bottom > 0) {
-          heroContent.classList.add('visible');
-      } else {
-          heroContent.classList.remove('visible');
-      }
+          if (rectHeader.top < viewHeight * 0.75 && rectHeader.bottom > 0) {
+              header.classList.add('visible');
+          } else {
+              header.classList.remove('visible');
+          }
+      });
+
+      heroContents.forEach(function(content) {
+          var rectContent = content.getBoundingClientRect();
+
+          if (rectContent.top < viewHeight * 0.75 && rectContent.bottom > 0) {
+              content.classList.add('visible');
+          } else {
+              content.classList.remove('visible');
+          }
+      });
   }
 
   window.addEventListener('scroll', checkVisibility);
@@ -121,14 +107,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.image');
 
+  function checkVisibility() {
+      images.forEach(image => {
+          const rect = image.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
 
+          // Verifica se l'immagine è visibile per almeno il 50% della viewport
+          if (rect.top < windowHeight * 0.40 && rect.bottom > 0) {
+              image.style.clipPath = 'inset(0 0 0 0)';
+          } else {
+              image.style.clipPath = 'inset(100% 0 0 0)';
+          }
+      });
+  }
 
-
-
-
-
-
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('resize', checkVisibility);
+  checkVisibility(); // Verifica la visibilità al caricamento della pagina
+});
 
 
 // INFO-ARROW

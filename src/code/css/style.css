@@ -256,7 +256,7 @@ button:hover {
     padding-bottom: 200px;
     padding-right: 200px;
     padding-left: 200px;
-    height: 300px;
+    height: 550px;
 }
 
 .content h1, .content p {
@@ -269,7 +269,7 @@ button:hover {
 
 
 .hero {
-    height: 100vh; /* Altezza della sezione al 100% della viewport */
+    height: 220vh;
     display: flex;
     flex-direction: column;
     color: var(--second-text-color); /* Colore del testo bianco */
@@ -306,35 +306,46 @@ button:hover {
 .hero p {
     font-family: 'GL';
     font-weight: 900;
-    font-size: 2rem; /* Applicato lo stesso stile di font-size per h1 e p */
-    margin-bottom: 2rem; /* Margin bottom uniforme per tutti i paragrafi */
+    font-size: 2rem; 
+    margin-bottom: 2rem; 
 }
 
 .hero-header.visible, .hero-content.visible {
-    opacity: 1; /* Reso visibile */
-    transform: translateY(0); /* Posizione normale */
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 
+.image-container {
+    position: relative;
+    width: 60%; 
+    margin-top: 100px;
+    margin-bottom: 850px;
+}
 
+.image {
+    align-items: center;
+    position: absolute;
+    clip-path: inset(100% 0 0 0); 
+    transition: clip-path 1s ease-out;
+}
 
+.image1 {
+    top: 0;
+    left: 300px;
+    width: 700px; 
+}
 
+.image2 {
+    top: 300px; 
+    left: 700px; 
+    width: 700px; 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.image-container.visible {
+    opacity: 1; /* Reso visibile */
+    transform: translateY(0); /* Posizione normale */
+}
 
 
 
