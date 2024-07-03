@@ -264,10 +264,6 @@ button:hover {
     transition: color 0.5s ease;
 }
 
-
-
-
-
 .hero {
     height: 220vh;
     display: flex;
@@ -315,7 +311,6 @@ button:hover {
     transform: translateY(0); 
 }
 
-
 .image-container {
     position: relative;
     width: 60%; 
@@ -356,10 +351,6 @@ button:hover {
 
 
 
-
-
-
-
 /*SERVICES*/
 .services {
     display: flex;
@@ -380,43 +371,39 @@ button:hover {
 }
   
 .auto-annuncio:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombra più evidente al passaggio del mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
 }
   
 .immagine-auto {
     position: relative;
     overflow: hidden;
+    max-height: 400px;
 }
   
 .immagine-auto img {
-    width: 100%; /* Occupa tutta la larghezza disponibile */
-    height: auto; /* Altezza automatica per mantenere l'aspetto proporzionato */
+    width: 100%; 
+    height: auto; 
     display: block;
     transition: transform 0.3s ease;
 }
   
 .auto-annuncio:hover .immagine-auto img {
-    transform: scale(1.1); /* Ingrandimento dell'immagine al passaggio del mouse */
+    transform: scale(1.1); 
 }
   
 .informazioni {
     color: var(--second-text-color);
-    background-color: var(--third-bg-color); /* Sfondo bianco per le informazioni */
-    padding: 10px; /* Spaziatura interna più compatta */
+    background-color: var(--third-bg-color); 
+    padding: 10px; 
     box-sizing: border-box;
-    height: 50%; /* Altezza pari alla metà del contenitore */
+    height: 50%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
   
-.informazioni h3 {
-    margin-top: 0;
-    font-size: 24px; /* Testo più grande per il titolo */
-}
-  
 .informazioni p {
-    font-size: 18px; /* Testo più grande per le informazioni */
+    font-size: 15px; 
     margin-bottom: 5px;
 }
   
@@ -426,19 +413,37 @@ button:hover {
     right: 10px;
     width: 30px;
     height: 30px;
-    background-color: rgba(0, 0, 0, 0.1); /* Colore iniziale della freccia */
+    background-color: rgba(0, 0, 0, 0.1);
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
     transition: background-color 0.3s ease;
     opacity: 1;
 }
   
 .arrow.active {
-    opacity: 1; /* Freccia visibile quando attiva */
+    opacity: 1; 
 }
   
 .auto-annuncio:hover .arrow {
-    background-color: var(--main-color); /* Colore leggermente più scuro al passaggio del mouse */
+    background-color: var(--main-color); 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*CONTACT*/
 .contact {

@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
   checkVisibility(); // Verifica la visibilità al caricamento della pagina
 });
 
-
+// HERO IMG
 document.addEventListener('DOMContentLoaded', function() {
   const images = document.querySelectorAll('.image');
 
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const windowHeight = window.innerHeight;
 
           // Verifica se l'immagine è visibile per almeno il 50% della viewport
-          if (rect.top < windowHeight * 0.40 && rect.bottom > 0) {
+          if (rect.top < windowHeight * 0.80 && rect.bottom > 0) {
               image.style.clipPath = 'inset(0 0 0 0)';
           } else {
               image.style.clipPath = 'inset(100% 0 0 0)';

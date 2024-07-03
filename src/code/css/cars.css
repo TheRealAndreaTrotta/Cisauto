@@ -1,0 +1,109 @@
+/* Stili CSS già definiti, non sono state apportate modifiche rispetto alla tua versione */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.annunci {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auto-annuncio {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 80%;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auto-annuncio:hover {
+    transform: scale(1.05);
+}
+
+.immagine-auto {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.immagine-auto img {
+    max-width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+}
+
+.informazioni {
+    flex: 2;
+    padding: 10px;
+}
+
+.informazioni h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.informazioni p {
+    margin: 0;
+    color: #666;
+}
+
+.dettagli {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.dettagli h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.dettagli p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.dettagli ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.dettagli li {
+    margin-bottom: 5px;
+}
