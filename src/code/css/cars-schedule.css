@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.auto-scheda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 80%;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.auto-immagine {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrato */
+}
+
+.auto-immagine-principale {
+    max-width: 100%;
+    max-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.auto-immagine-principale img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.auto-frecce {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.auto-freccia {
+    cursor: pointer;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    border: none;
+    user-select: none;
+}
+
+.auto-freccia.sinistra {
+    left: 0;
+}
+
+.auto-freccia.destra {
+    right: 0;
+}
+
+.auto-indicatore {
+    text-align: center;
+    color: black;
+    margin-top: 10px;
+}
+
+.auto-miniature {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    overflow-x: auto;
+    padding: 10px;
+    scroll-behavior: smooth; /* Smooth scrolling for better UX */
+}
+
+.auto-thumbnail {
+    width: 150px;
+    height: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s, transform 0.3s ease;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+}
+
+.auto-thumbnail.active {
+    border-color: #ff0000;
+    opacity: 1;
+}
+
+.auto-thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.auto-info {
+    z-index: 100;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auto-info h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.auto-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.auto-info ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.auto-info li {
+    margin-bottom: 5px;
+}
+
+/* Stili per la visualizzazione a schermo intero */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.fullscreen img {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.fullscreen .auto-frecce {
+    width: 100%;
+}
+
+.fullscreen .auto-miniature {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.fullscreen .auto-thumbnail {
+    width: 150px;
+    height: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s, transform 0.3s ease;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+}
+
+.fullscreen .auto-thumbnail.active {
+    border-color: #ff0000;
+    opacity: 1;
+}
+
+.fullscreen .auto-thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.fullscreen-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
